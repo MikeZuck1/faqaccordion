@@ -1,36 +1,34 @@
-// Content.tsx
-import Accordeon from "@/components/ui/Accordeon"; // import par défaut
+import Accordeon from "@/components/ui/Accordeon"; // Import du composant
 
 export const Content = () => {
   const patternBackground =
     "../faq-accordion-guide/assets/images/background-pattern-desktop.svg";
-  const sizePatternBackground = { width: "6%", height: "5%" };
   const iconStar = "../../../faq-accordion-guide/assets/images/icon-star.svg";
 
   return (
-    <div>
-      {/* Image de fond */}
+    <div className="relative flex items-center justify-center min-h-screen">
+      {/* Image de fond (fixe) */}
       <img
         src={patternBackground}
         alt="pattern-background"
-        className="w-full h-full object-cover"
+        className="fixed inset-0 w-full object-cover -z-10"
       />
 
       {/* Contenu positionné devant l'image */}
-      <div className="absolute top-[0rem] flex flex-col items-center justify-center w-full h-full">
-        <div className="shadow-md w-[30rem] h-[23rem] bg-white p-5 rounded-xl">
-          <div className="flex flex-row space-x-4">
+      <div className="w-full flex items-center justify-center">
+        <div className="shadow-lg w-full max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-[30rem] bg-white p-6 sm:p-8 rounded-xl">
+          {/* Titre + icône étoile */}
+          <div className="flex items-center space-x-4">
             <img
-              style={sizePatternBackground}
               src={iconStar}
               alt="icon-star"
-              className="mt-2"
+              className="w-6 h-6 sm:w-8 sm:h-8 self-center"
             />
-            <div className="flex flex-col">
-              <h1 className="text-4xl font-bold">FAQs</h1>
-            </div>
+            <h1 className="text-4xl font-bold">FAQs</h1>
           </div>
-          <div className="mt-1">
+
+          {/* Section Accordeon */}
+          <div className="mt-4">
             <Accordeon />
           </div>
         </div>

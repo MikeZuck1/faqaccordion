@@ -1,11 +1,10 @@
 import "./App.css";
 import { Content } from "./components/ui/Content";
-// import { cn } from "@/lib/utils"; // Correct, car le chemin vers utils.ts existe
 
 function App() {
   return (
     <>
-      <div>
+      <div className="max-w-[375px]sm:max-w-[640px] xl:max-w-[1440px]">
         <Content />
       </div>
     </>
