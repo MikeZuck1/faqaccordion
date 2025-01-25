@@ -1,50 +1,58 @@
-# React + TypeScript + Vite
+# FAQ Accordion
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my solution to the FAQ Accordion challenge from Frontend Mentor.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+In this project, I built a FAQ accordion, a widely used front-end pattern that displays frequently asked questions with collapsible answers. The project allowed me to practice building interactive and responsive components using modern front-end tools.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- A fully functional FAQ accordion with expand/collapse toggle functionality.
+- Plus and minus SVG icons for toggling.
+- Fully responsive design that works well on both desktop and mobile screens.
+- Implemented with React, Vite, and shadcn/ui for the accordion UI components.
 
-- Configure the top-level `parserOptions` property like this:
+## Prerequisites
+- npm (or Yarn) 
+- npm create vite@latest  
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Installation
+
+1. Clone this repository on your local machine : 
+
+```bash
+  git clone https://github.com/MikeZuck1/faqaccordion.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+2. Navigate to the project directory :
+```bash
+  cd faq-accordion
 ```
+
+3. Install dependencies :
+
+```bash
+  npm install
+```
+
+4. Start the development server :
+```bash
+  npm run dev
+```
+This will start the development server, and your project will be accessible at http://localhost:5173. 
+
+5. Building for production :
+
+To create a production-optimized version of the project, run :
+```bash
+  npm run build
+```
+    
+## Acknowledgements
+
+- This project was built as part of a challenge from Frontend Mentor.
+- Thanks to shadcn/ui for providing the components that helped speed up the development process.
+## License
+
+This project is licensed under the MIT license. 
